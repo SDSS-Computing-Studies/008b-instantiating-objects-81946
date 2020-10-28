@@ -73,3 +73,53 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
+self = ''
+class vet:
+    animal = None
+    breed = None
+    name = None
+    owner = None
+    birthdate = None
+
+    def __init__(self):
+        self.animal = input("Enter an animal: ")
+        self.breed = input("Enter the breed: ")
+        self.name = input("Enter the name: ")
+        self.owner = input("Who is the owner?: ")
+        self.birthdate = input("Enter the birthdate: ")
+        vet.main(self)
+
+    def main(self):
+        print("==============================================")
+        print("1: Enter a new pet  2: Retrieve a pet  3: Exit")
+        print("==============================================")
+        ent = input("")
+        ent= int(ent)
+        if ent==1:
+            vet()
+
+        if ent==2:
+            named = input("Enter pet's name: ")
+            named= str(named)
+            if self.name == named:
+                vet.display(self)
+
+        if ent==3:
+            print("Exited")
+
+
+    def display(self):
+        print(self.name + ' ' + self.animal + "\n" + self.breed + ' '+ "is owned by" +' '+ self.owner + "\n" )
+        vet.main(self)
+
+
+# when more than omne animal, when call for not latest... will mess up and go vet()
+
+
+
+animals = []
+
+vet.main(self)
+
+animals.append( vet() )
+vet.main(self)
