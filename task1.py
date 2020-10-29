@@ -85,41 +85,66 @@ class vet:
         self.animal = input("Enter an animal: ")
         self.breed = input("Enter the breed: ")
         self.name = input("Enter the name: ")
-        self.owner = input("Who is the owner?: ")
+        self.owner = input("Who is the owner: ")
         self.birthdate = input("Enter the birthdate: ")
-        vet.main(self)
-
-    def main(self):
-        print("==============================================")
-        print("1: Enter a new pet  2: Retrieve a pet  3: Exit")
-        print("==============================================")
-        ent = input("")
-        ent= int(ent)
-        if ent==1:
-            vet()
-
-        if ent==2:
-            named = input("Enter pet's name: ")
-            named= str(named)
-            if self.name == named:
-                vet.display(self)
-
-        if ent==3:
-            print("Exited")
 
 
     def display(self):
         print(self.name + ' ' + self.animal + "\n" + self.breed + ' '+ "is owned by" +' '+ self.owner + "\n" )
-        vet.main(self)
 
 
-# when more than omne animal, when call for not latest... will mess up and go vet()
+
+# when more than one animal, when call for not latest... will mess up and go vet()
+
+def main():
+    ent = 0
+    while ent !=3:
+        print("\n")
+        print("==============================================")
+        print("1: Enter a new pet  2: Retrieve a pet  3: Exit")
+        print("==============================================")
+        ent = input("")
+        print("\n")
+        ent= int(ent)
+        if ent==1:
+            animals.append( vet() )
+
+        if ent==2:
+            # animals is your list
+            named = (input("Enter pet's name: ")).strip()
+            x=0
+            for i in animals:
+
+                print(i)
+                print(i.animal)
+                print(i.name)
+                print(i.breed)
+                print(i.owner)
+                print(i.birthdate)
+                if named == i.name:
+                    print("Yes")
+                    display(self)  #Put data to be in display
+                    
+                    
+
+                else:
+                    x= x+1
+            
+            
+            if named != animals: 
+                pass
+                #print("No pet is under that name")
+                #main()
 
 
+
+        if ent==3:
+            print("Exited")
+            
+
+  
 
 animals = []
+main()
 
-vet.main(self)
 
-animals.append( vet() )
-vet.main(self)
