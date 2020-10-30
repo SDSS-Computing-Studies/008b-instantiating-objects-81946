@@ -112,7 +112,7 @@ def main():
         if ent==2:
             # animals is your list
             named = (input("Enter pet's name: ")).strip()
-            x=0
+            x=-1
             for i in animals:
 
                 print(i)
@@ -121,11 +121,16 @@ def main():
                 print(i.breed)
                 print(i.owner)
                 print(i.birthdate)
+                x=x+1
                 if named == i.name:
+                    print(x)
+                    print(animals[x].display)
+                    print(vet.display(self))
                     print("Yes")
-                    display(self)  #Put data to be in display
-                    
-                    
+                    #vet.display(self)  #Put data to be in display
+                
+                
+                
 
                 else:
                     x= x+1
