@@ -108,25 +108,23 @@ def main():
         ent= int(ent)
         if ent==1:
             animals.append( vet() )
+            
 
         if ent==2:
             # animals is your list
             named = (input("Enter pet's name: ")).strip()
-            x=-1
+            x=-2
             for i in animals:
-
-                print(i)
-                print(i.animal)
-                print(i.name)
-                print(i.breed)
-                print(i.owner)
-                print(i.birthdate)
-                x=x+1
+                print(x)
+                y=x+1
                 if named == i.name:
+                    x=y-x
                     print(x)
-                    print(animals[x].display)
-                    print(vet.display(self))
-                    print("Yes")
+                    print("\n")
+                    print(animals[x].display())
+                    print("\n")
+                    x=1
+
                     #vet.display(self)  #Put data to be in display
                 
                 
