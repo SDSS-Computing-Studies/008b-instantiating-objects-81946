@@ -113,33 +113,19 @@ def main():
         if ent==2:
             # animals is your list
             named = (input("Enter pet's name: ")).strip()
-            x=-2
+            index= 0
             for i in animals:
-                print(x)
-                y=x+1
                 if named == i.name:
-                    x=y-x
-                    print(x)
                     print("\n")
-                    print(animals[x].display())
+                    print(animals[index].display())
                     print("\n")
-                    x=1
+                index= index + 1
 
-                    #vet.display(self)  #Put data to be in display
                 
                 
-                
-
-                else:
-                    x= x+1
-            
-            
-            if named != animals: 
-                pass
-                #print("No pet is under that name")
-                #main()
-
-
+                #if named != animals: 
+                   # print("No pet is under that name")
+                    #main()
 
         if ent==3:
             print("Exited")
